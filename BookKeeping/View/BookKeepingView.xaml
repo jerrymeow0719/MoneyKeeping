@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="BookKeeping.View.BookKeepingView" Title="Main Page" xmlns:BKconverter="clr-namespace:BookKeeping.ViewModel">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <BKconverter:ColorConverter x:Key="ColorConverter"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <StackLayout>
+        <CollectionView x:Name="collectionview" ItemSizingStrategy="MeasureAllItems" SelectionMode="Single">
+            <CollectionView.ItemsLayout>
+                <GridItemsLayout Orientation="Horizontal" Span="3" VerticalItemSpacing="10" HorizontalItemSpacing="10"/>
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Padding="10" BackgroundColor="{Binding Month, Converter={StaticResource ColorConverter}}">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="60"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Text="{Binding Month}" Grid.Row="0" Grid.Column="0" FontSize="24" FontAttributes="Bold" TextColor="Black" HorizontalTextAlignment="Start"/>
+                        <StackLayout Grid.Row="1" Grid.Column="0" VerticalOptions="End">
+                            <Label Text="Total" FontSize="16" TextColor="Black" HorizontalTextAlignment="Start"/>
+                            <Label Text="{Binding Spend5}" FontSize="16" HorizontalTextAlignment="Start"/>
+                        </StackLayout>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        <Button x:Name="btn_Add" Text="Add"/>
+    </StackLayout>
+</ContentPage>

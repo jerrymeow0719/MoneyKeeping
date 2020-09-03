@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="BookKeeping.View.DetailInfoView" Title="Detail">
+    <StackLayout>
+        <Label Text="{Binding Month}" FontSize="Header" FontAttributes="Bold" TextColor="Black"/>
+        <StackLayout>
+            <Label Text="Rent: " FontSize="Body" FontAttributes="Bold" TextColor="Black"/>
+            <Label Text="{Binding Spend0}" FontSize="Body" TextColor="Black"/>
+        </StackLayout>
+        <StackLayout>
+            <Label Text="Home: " FontSize="Body" FontAttributes="Bold" TextColor="Black"/>
+            <Label Text="{Binding Spend1}" FontSize="Body" TextColor="Black"/>
+        </StackLayout>
+                <StackLayout>
+            <Label Text="Food: " FontSize="Body" FontAttributes="Bold" TextColor="Black"/>
+            <Label Text="{Binding Spend2}" FontSize="Body" TextColor="Black"/>
+        </StackLayout>
+        <StackLayout>
+            <Label Text="Save: " FontSize="Body" FontAttributes="Bold" TextColor="Black"/>
+            <Label Text="{Binding Spend3}" FontSize="Body" TextColor="Black"/>
+        </StackLayout>
+        <StackLayout>
+            <Label Text="Others: " FontSize="Body" FontAttributes="Bold" TextColor="Black"/>
+            <Label Text="{Binding Spend4}" FontSize="Body" TextColor="Black"/>
+        </StackLayout>
+     </StackLayout>
+</ContentPage>

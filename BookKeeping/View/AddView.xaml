@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="BookKeeping.View.AddView" Title="Add">
+    <StackLayout>
+        <Entry x:Name="entry_year" Keyboard="Numeric"/>
+        <Picker x:Name="picker_month" Title="Select month">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>1</x:String>
+                    <x:String>2</x:String>
+                    <x:String>3</x:String>
+                    <x:String>4</x:String>
+                    <x:String>5</x:String>
+                    <x:String>6</x:String>
+                    <x:String>7</x:String>
+                    <x:String>8</x:String>
+                    <x:String>9</x:String>
+                    <x:String>10</x:String>
+                    <x:String>11</x:String>
+                    <x:String>12</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+        <Picker x:Name="picker_type" Title="Select type">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Rent</x:String>
+                    <x:String>Home</x:String>
+                    <x:String>Food</x:String>
+                    <x:String>Save</x:String>
+                    <x:String>Others</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+        <Entry x:Name="entry_money" Keyboard="Numeric"/>
+        <StackLayout Orientation="Horizontal">
+        <Button x:Name="btn_save" Text="Save"/>
+        <Button x:Name="btn_cancel" Text="Cancel"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
